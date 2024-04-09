@@ -1,0 +1,34 @@
+{
+  "name": "shopify-product-export-to-csv",
+  "version": "1.0.0",
+  "description": "Tool to export products from any Shopify store to CSV",
+  "main": "app.js",
+  "type": "module",
+  "bin": {
+    "shopify-export": "./app.js"
+  },
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "ECOMGRADUATES LLC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EcomGraduates/shopify-product-export-to-csv.git"
+  },
+  "license": "",
+  "keywords": [
+    "shopify",
+    "shopify product export",
+    "shopify product exporter",
+    "shopify product export to csv",
+    "shopify product export to csv nodejs",
+    "shopify product export to csv nodejs app"
+  ],
+  "dependencies": {
+    "@fast-csv/format": "^5.0.0",
+    "axios": "^1.6.8",
+    "fs": "^0.0.1-security",
+    "inquirer": "^9.2.17",
+    "prompts": "^2.4.2"
+  }
+}
