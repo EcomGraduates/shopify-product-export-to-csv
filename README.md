@@ -55,6 +55,10 @@ To export products with custom configurations:
 node shopify-export.js https://yourshopifystore.com 50 5 3000 custom_export.csv
 ```
 
+
+https://github.com/EcomGraduates/shopify-product-export-to-csv/assets/74157486/2a4e411d-487b-4d15-ad5c-fe8b75cad706
+
+
 ## Contributing
 
 Your contributions are welcome! If you have suggestions for improving this tool, please open an issue or submit a pull request.
