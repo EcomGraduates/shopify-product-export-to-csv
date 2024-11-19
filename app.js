@@ -52,14 +52,27 @@ async function fetchAllProducts(totalProducts) {
 
 // Fetch products from a specific collection
 async function fetchProductsFromCollection(collectionHandle) {
-    const url = `${baseUrl}/collections/${collectionHandle}/products.json?limit=${productLimit}`;
-    try {
-        const response = await axios.get(url);
-        return response.data.products;
-    } catch (error) {
-        console.error(`Error fetching products from collection ${collectionHandle}:`, error);
-        return [];
+    let page = 1;
+    let products = [];
+
+    while (true) {
+        const url = `${baseUrl}/collections/${collectionHandle}/products.json?limit=${productLimit}&page=${page}`;
+        try {
+            const response = await axios.get(url);
+            if (response.data.products.length === 0) {
+                console.log('Final page reached');
+                break;
+            }
+            products = products.concat(response.data.products);
+            console.log(`Fetched page ${page}`);
+            await sleep(requestDelay); // Delay to prevent hitting rate limits
+            page++;
+        } catch (error) {
+            console.error(`Error fetching page ${page} for collection ${collectionHandle}:`, error);
+        }
     }
+
+    return products;
 }
 
 // Fetch all collections
