@@ -32,7 +32,7 @@ To use this tool, you must provide the base URL of your Shopify store as a comma
 Run the script with the necessary command line arguments:
 
 ```
-node shopify-export.js [Shopify Store URL] [Products Per Page] [Max Pages] [Request Delay] [CSV File Name]
+node app.js [Shopify Store URL] [Products Per Page] [Max Pages] [Request Delay] [CSV File Name]
 ```
 
 - `[Shopify Store URL]` - The base URL of your Shopify store.
@@ -46,13 +46,13 @@ node shopify-export.js [Shopify Store URL] [Products Per Page] [Max Pages] [Requ
 To export all products from the store:
 
 ```
-node shopify-export.js https://yourshopifystore.com
+node app.js https://yourshopifystore.com
 ```
 
 To export products with custom configurations:
 
 ```
-node shopify-export.js https://yourshopifystore.com 50 5 3000 custom_export.csv
+node app.js https://yourshopifystore.com 50 5 3000 custom_export.csv
 ```
 
 
